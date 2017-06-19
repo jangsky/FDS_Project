@@ -25,7 +25,7 @@ public class CreateAccountConsumer extends Thread {
 		props.put("group.id", groupId);
 		props.put("key.deserializer", StringDeserializer.class.getName());
 		props.put("value.deserializer", StringDeserializer.class.getName());
-		props.put("auto.offset.reset", "largest");
+		props.put("auto.offset.reset", "latest");
 		this.consumer = new KafkaConsumer<String, String>(props);
 	}
 
